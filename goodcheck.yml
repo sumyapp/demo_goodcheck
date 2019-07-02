@@ -1,0 +1,23 @@
+rules:
+  - id: review.sider.wording.signin
+    pattern:
+      - token: Log in
+        case_sensitive: false
+      - token: Log out
+        case_sensitive: false
+    glob: 
+      - "**/*.html.erb"
+      - "**/*.yml"
+    message: |
+      Please use “sign in”/“sign out”.
+
+      We use “sign in” instead of “log in” and “sign out” instead of “log out”.
+      See the wording policy for details.
+
+      https://docs.example.com/1840
+    fail:
+      - "Log in"
+      - "Log out"
+    pass:
+      - "Sign in"
+      - "Sign out"
